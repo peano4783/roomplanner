@@ -35,11 +35,23 @@
           <input class="form-control btn-success" type="submit" name="submit_button" value="Submit">
         </div>
       </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <canvas class="col-sm-12" width="1000" height="800" id="myCanvas" style="border:1px solid #000;"></canvas>
+        </div>
+      </div>
     </div>
     </form>
+
     <script src="roomplanner.js"></script>
     <script>
         loadDefaultInputData("input_data");
+const canvas = document.getElementById('myCanvas');
+const ctx = canvas.getContext('2d'); // This gives you the 2D drawing API
+
+// Draw a red rectangle
+ctx.fillStyle = 'red';
+ctx.fillRect(20, 20, 150, 100);
     </script>
 </body>
 
